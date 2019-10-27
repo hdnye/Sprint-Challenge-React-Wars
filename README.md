@@ -26,13 +26,26 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+    React is a component library built in JS to render UI using the virtual DOM. Everything in React is a component. React solves the problem of having to rewrite JS code repeatedly for similar functions by allowing the React components to be called w/in the JS functions and having that functionality be applied within. 
+
+
 - [ ] What does it mean to _think_ in react?
+
+    To think in React is to break down the project being built into its components and deciding which functions work best w/in those ind'l frameworks and then adding them into the parent file to complete the app. 
+
 
 - [ ] Describe state.
 
+    state is defined withing the component it's being called in. It can't be accessed outside of that component and its data depends wholly upon what data is being fed into state w/in that component. 
+
 - [ ] Describe props.
 
+     props are React's way of passing down data from the parent component to the child. The data can't be altered by the child component unless there's a callback function passed to the child component as well. 
+
 - [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+
+    Side effects are something that effects anything outside the scope of a function and usually require clean-up. By adding a dependency array at the end of the useEffect function, a developer will close the infinite loop and be able to pass the information from state and props as intended. 
+
 
 ## Project Set Up
 
