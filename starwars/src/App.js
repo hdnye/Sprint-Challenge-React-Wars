@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Characters from './components/Characters';
+import Characters from './components/CharacterCards/Characters';
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
