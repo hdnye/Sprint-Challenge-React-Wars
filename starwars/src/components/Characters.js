@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import CharacterCards from './CharacterCards';
+import { Container, Row } from 'reactstrap';
 
 
 export default function Characters() {
 
    const [chars, setChars] = useState([]);
-
+    
     useEffect(() => {
 
         axios.get(`https://swapi.co/api/people/`)
@@ -22,17 +23,18 @@ export default function Characters() {
     }, []);
 
     return (
-        <div className='char'>
-        {chars.map(char => {
-            return <CharacterCards key={char.id}
-            films={char.films}
-            name={char.name}
-            homeworld={char.planets}
-            species={char.species}
-            startships={char.startships}
-            vehicles={char.vehicles}
-         />
-        })}
-    </div>
+        <Container>
+            <Row>
+             {chars.map(char => {
+                return <CharacterCards key={char.id}
+                    films={char.films}
+                    name={char.name}
+                    homeworld={char.planets}
+                    species={char.species}
+                    startships={char.starships}
+                    vehicles={char.vehicles}/>
+               })}
+          </Row>
+    </Container>
     )
 }

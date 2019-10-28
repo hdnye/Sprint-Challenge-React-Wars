@@ -1,13 +1,12 @@
 import React from 'react';
-import {
-    Card, CardText, CardBody,
-    CardTitle } from 'reactstrap';
+import {  Card, CardBody, CardTitle, CardText, Col } from 'reactstrap';
+
   
 
 const CharacterCards = props => {
 
     return (
-        <div key={props.id}>
+        <Col xs='6' sm='4' key={props.id}>
             <Card>
                 <CardBody>
                     <CardTitle>Character: {props.name}</CardTitle>
@@ -20,7 +19,7 @@ const CharacterCards = props => {
                    </CardText>
                 </CardBody>
             </Card>
-        </div>
+        </Col>
     );
 };
 
