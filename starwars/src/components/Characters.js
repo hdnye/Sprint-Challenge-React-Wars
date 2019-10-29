@@ -7,13 +7,16 @@ import { Container, Row } from 'reactstrap';
 export default function Characters() {
 
    const [chars, setChars] = useState([]);
+
     
     useEffect(() => {
 
         axios.get(`https://swapi.co/api/people/`)
             .then(response => {
                 console.log(response);
-                setChars=(response.data);
+                console.log(response.data);
+                //look at the results coming back to see where you need to call your data from//
+                setChars(response.data.results);
             })
             .catch(error => {
                 console.log(`Error Message Here`, error);
@@ -38,3 +41,4 @@ export default function Characters() {
     </Container>
     )
 }
+

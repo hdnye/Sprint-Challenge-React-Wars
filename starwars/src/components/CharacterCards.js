@@ -6,8 +6,8 @@ import {  Card, CardBody, CardTitle, CardText, Col } from 'reactstrap';
 const CharacterCards = props => {
 
     return (
-        <Col xs='6' sm='4' key={props.id}>
-            <Card>
+        <Col xs='6' sm='4'>
+            <Card key={props.id}>
                 <CardBody>
                     <CardTitle>Character: {props.name}</CardTitle>
                          <CardText>
