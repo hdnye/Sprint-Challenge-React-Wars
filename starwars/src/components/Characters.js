@@ -30,12 +30,12 @@ export default function Characters() {
             <Row>
              {chars.map(char => {
                 return <CharacterCards key={char.id}
-                    films={char.films}
+                    birth_year={char.birth_year}
                     name={char.name}
-                    homeworld={char.planets}
-                    species={char.species}
-                    startships={char.starships}
-                    vehicles={char.vehicles}/>
+                    hair_color={char.hair_color}
+                    mass={char.mass}
+                    eye_color={char.eye_color}
+                    hair_color={char.hair_color}/>
                })}
           </Row>
     </Container>
